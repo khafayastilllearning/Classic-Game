@@ -1,0 +1,95 @@
+body {
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container { 
+  text-align: center; 
+  position: relative;
+}
+
+header { margin-bottom: 10px; }
+
+h1 {
+  margin: 6px 0 2px;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin: 8px 0 6px;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+canvas {
+  background: #000;
+  border: 3px solid #555;
+  display: block;
+  margin: 0 auto;
+  image-rendering: pixelated;
+  transition: filter 0.3s ease;
+}
+
+/* Popup */
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(20, 20, 20, 0.95);
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  width: 80%;
+  max-width: 320px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.popup.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.popup h2 {
+  margin: 0 0 10px;
+  font-size: 1.8rem;
+  color: #ff4d4d;
+}
+
+.popup p {
+  margin: 6px 0;
+  font-size: 1.1rem;
+}
+
+.popup button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  font-size: 1.1rem;
+  background: #4cafef;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.popup button:hover {
+  background: #3a9fdc;
+}
+
+.blur {
+  filter: blur(3px);
+}
